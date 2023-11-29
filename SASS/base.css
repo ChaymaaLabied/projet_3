@@ -6,6 +6,9 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/********* variables ******/
+/********** Mixin ***********/
+/**** bouton violet**/
 /******* header ******/
 .header {
   padding: 1rem;

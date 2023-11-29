@@ -1,17 +1,52 @@
+@use "sass:color";
 /*********général********/
+
 body {
   width: 100%;
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
 
+
+/********* variables ******/
 $appPadding: 1rem;
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+
+  /********** Mixin ***********/
+     /**** bouton violet**/
+@mixin button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--Button-Gradient, linear-gradient(193deg,$color-primary -11.44%, $color-secondary 123.93%));
+  color: white;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  margin: auto;
+  height: 50px;
+  width: 200px;
+  border-radius: 40px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  /* Par rapport à l'animation du bouton violet*/
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+
+  &:hover{
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+    transform: scale(1.05);
+    opacity: 0.85;
+  }
+
+}
 
 /******* header ******/
 
 .header {
-  padding: 1rem;
+  padding: $appPadding;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   position: relative;
 
@@ -36,8 +71,8 @@ $color-tertiary: #99E2D0;
     gap: $appPadding ;
 
     @media (min-width:64rem) {
-      padding: 2rem;
-      gap: 3rem;
+      padding: 2*$appPadding;
+      gap: 3*$appPadding;
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       grid-template-areas: 'second first';
@@ -61,7 +96,7 @@ $color-tertiary: #99E2D0;
 
     @media (min-width:64rem) {
       display: flex;
-      gap: 1rem;
+      gap: $appPadding;
       align-items: end;
       justify-content: flex-end;
     }

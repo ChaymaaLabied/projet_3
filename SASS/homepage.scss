@@ -1,5 +1,5 @@
-$appPadding: 1rem;
-$color-tertiary: #99E2D0;
+@import "base";
+
 /* champ de recherche */
 
 .location_research {
@@ -20,7 +20,7 @@ $color-tertiary: #99E2D0;
 
 /******section1*******/
 .introduction {
-  padding: 2rem;
+  padding: 2*$appPadding;
   text-align: center;
   background-color: #fafafa;
 
@@ -39,39 +39,18 @@ $color-tertiary: #99E2D0;
   }
 
   &_btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    margin: auto;
+    @include button;
     font-size: 14px;
-    width: 218px;
-    height: 50px;
-    border-radius: 40px;
-    text-decoration: none;
-    cursor: pointer;
-    /* Par rapport à l'animation du bouton violet*/
-    transition-property: transform;
-    transition-duration: 300ms;
-    transition-timing-function: ease-in-out;
-
-    &:hover{
-      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-      transform: scale(1.05);
-      opacity: 0.85;
-    }
   }
 }
 
 /*****section2:fonctionnement******/
 
 .Function {
-  padding: ($appPadding + 1rem) $appPadding;
+  padding: (2*$appPadding) $appPadding;
 
   @media (min-width:64rem) {   
-  padding: 3rem 10rem;
+  padding: 3*$appPadding 10*$appPadding;
     
   }
 
@@ -102,7 +81,7 @@ $color-tertiary: #99E2D0;
     @media (min-width:64rem) {
       flex: 1;
       margin: 0;
-      margin-left: 2rem;
+      margin-left: 2*$appPadding;
 
       &:first-child {
         margin-left: 0.75rem;
@@ -112,7 +91,7 @@ $color-tertiary: #99E2D0;
     &::before {
       counter-increment: liste 1;
       content: counter(liste) " ";
-      background: #9356DC;
+      background: $color-primary;
       height: 1.5rem;
       width: 1.5rem;
       border-radius: 100px;
@@ -132,7 +111,7 @@ $color-tertiary: #99E2D0;
 
   &_icon3 {
     margin-right: $appPadding;
-    color: #9356dc;
+    color:$color-primary;
   }
   &_text{
     @media ( min-width :64rem){
@@ -146,10 +125,10 @@ $color-tertiary: #99E2D0;
 
 .Restaurants {
   background-color: #f6f6f6;
-  padding: ($appPadding + 1rem) $appPadding;
+  padding: (2*$appPadding) $appPadding;
   
   @media (min-width:64rem){
-    padding: 2rem 10rem;
+    padding: 2*$appPadding 10*$appPadding;
   }
 
   &_title {
@@ -161,19 +140,19 @@ $color-tertiary: #99E2D0;
 .cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  column-gap: 2rem;
-  row-gap: 2rem;
+  column-gap: 2*$appPadding;
+  row-gap: 2*$appPadding;
 
   @media (min-width:64rem) {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 5rem;
-    row-gap: 3rem;
+    column-gap: 5*$appPadding;
+    row-gap: 3*$appPadding;
   }
 }
 
 .card {
   background-color: white;
-  border-radius: 1rem;
+  border-radius: $appPadding;
   position: relative;
   text-decoration: none;
   color: inherit;
@@ -182,10 +161,10 @@ $color-tertiary: #99E2D0;
   transition: .2s;
 
   &_img {
-    height: 12rem;
+    height: 12*$appPadding;
     width: 100%;
     border: transparent solid 0px;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: $appPadding $appPadding 0 0;
     box-shadow: none;
     object-fit: cover;
   }
@@ -221,8 +200,8 @@ $color-tertiary: #99E2D0;
   }
 
   &_btn {
-    height: 2rem;
-    width: 2rem;
+    height: 2*$appPadding;
+    width: 2*$appPadding;
     border: transparent 0px solid;
     padding: 0;
     display: flex;
