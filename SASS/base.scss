@@ -68,11 +68,11 @@ $color-tertiary: #99E2D0;
     display: flex;
     flex-direction: column;
     padding: $appPadding;
-    gap: $appPadding ;
+    gap: 1rem ;
 
     @media (min-width:64rem) {
       padding: 2*$appPadding;
-      gap: 3*$appPadding;
+      gap: 3rem;
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       grid-template-areas: 'second first';
@@ -96,7 +96,7 @@ $color-tertiary: #99E2D0;
 
     @media (min-width:64rem) {
       display: flex;
-      gap: $appPadding;
+      gap: 1rem;
       align-items: end;
       justify-content: flex-end;
     }

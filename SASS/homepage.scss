@@ -1,5 +1,50 @@
 @import "base";
+@import "animation";
 
+/******** loader********/
+.loader{
+position: fixed;
+height: 100%;
+width: 100%;
+left: 0;
+top: 0;
+background-color: rgba(255, 255, 255, 0.90);
+animation: loader 0.01s;
+animation-delay: 1.75s;
+animation-fill-mode: both;
+z-index: 10000;
+display:flex;
+align-items:center;
+justify-content:center;
+
+&_item {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 2rem;
+  animation: jump 800ms;
+  animation-iteration-count: infinite;
+
+  &Container {
+    display: flex;
+    width: 15rem;
+    justify-content: space-between;
+  }
+
+  &--1 {
+    background-color:$color-tertiary;
+  }
+
+  &--2 {
+    background-color: $color-secondary;
+    animation-delay: 0.25s;
+  }
+
+  &--3 {
+    background-color: $color-primary ;
+    animation-delay: 0.5s;
+  }
+}
+}
 /* champ de recherche */
 
 .location_research {
@@ -140,19 +185,19 @@
 .cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  column-gap: 2*$appPadding;
-  row-gap: 2*$appPadding;
+  column-gap: 2rem;
+  row-gap: 2rem;
 
   @media (min-width:64rem) {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 5*$appPadding;
-    row-gap: 3*$appPadding;
+    column-gap: 5rem;
+    row-gap: 3rem;
   }
 }
 
 .card {
   background-color: white;
-  border-radius: $appPadding;
+  border-radius: 1rem;
   position: relative;
   text-decoration: none;
   color: inherit;
@@ -161,10 +206,10 @@
   transition: .2s;
 
   &_img {
-    height: 12*$appPadding;
+    height: 12rem;
     width: 100%;
     border: transparent solid 0px;
-    border-radius: $appPadding $appPadding 0 0;
+    border-radius: 1rem 1rem 0 0;
     box-shadow: none;
     object-fit: cover;
   }
@@ -175,7 +220,7 @@
     padding: 0.5rem;
     border-radius: 0.125rem;
     position: absolute;
-    top: $appPadding;
+    top: 1rem;
     right: 0.75rem;
   }
 
@@ -200,8 +245,8 @@
   }
 
   &_btn {
-    height: 2*$appPadding;
-    width: 2*$appPadding;
+    height: 2rem;
+    width: 2rem;
     border: transparent 0px solid;
     padding: 0;
     display: flex;
