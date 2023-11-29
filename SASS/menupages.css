@@ -1,0 +1,171 @@
+.header-formenupages {
+  position: relative;
+}
+.header_previous {
+  position: absolute;
+  left: 2rem;
+  height: 2rem;
+  width: 2rem;
+  top: 60%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: black;
+}
+
+.RestaurantImg {
+  max-width: 100%;
+  max-height: 18.5rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: relative;
+}
+@media (min-width: 64rem) {
+  .menu {
+    margin-top: -2rem;
+    margin-left: 11rem;
+    margin-right: 11rem;
+    padding: 0 9rem;
+  }
+}
+.menu_header {
+  padding: 1rem 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu_title {
+  font-family: "Shrikhand", "cursive";
+}
+.menu_btn {
+  height: 2rem;
+  width: 2rem;
+  border: transparent 0px solid;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu_heart {
+  font-size: 1.5rem;
+}
+
+.RestoMenus {
+  display: grid;
+}
+
+.RestoMenu {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+.RestoMenu_title {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: normal;
+}
+.RestoMenu_title::after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.menuItem {
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  max-width: 100%;
+}
+.menuItem_header {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+}
+.menuItem_title {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 18px;
+}
+.menuItem_description {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 15px;
+}
+.menuItem_price {
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 0.5rem;
+}
+.menuItem_confirmation {
+  background-color: #99E2D0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+.menuItem:hover .menuItem_confirmation {
+  margin-right: -1rem;
+}
+.menuItem_wrapIcon {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+.menuItem_icon {
+  color: #99E2D0;
+}
+
+.wrapBtn {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  padding: 2rem 0 2.5rem 0;
+}
+
+.commandBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  margin: auto;
+  font-size: 16px;
+  width: 190px;
+  height: 50px;
+  border-radius: 40px;
+  box-shadow: 2px 5px 20px #a7a7a7;
+  text-decoration: none;
+  border: none;
+}/*# sourceMappingURL=menupages.css.map */
