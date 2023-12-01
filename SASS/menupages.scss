@@ -1,4 +1,5 @@
 @import "base";
+@import "animation";
 
 .header {
   &-formenupages {
@@ -102,8 +103,8 @@
   cursor: pointer;
   max-width: 100%;
   /*animation des cartes */
-  animation: itemAppear .6s;
-  animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
+  animation: itemApp 700ms;
+  animation-timing-function:ease-in-out;
   animation-fill-mode: both;
   transform: scale(0);
 
@@ -175,7 +176,6 @@
     animation-delay: #{$i/10}s;
   }
 }
-
 
 .wrapBtn {
   display: flex;

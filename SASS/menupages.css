@@ -83,6 +83,36 @@ body {
   margin-right: 0.5rem;
 }
 
+@keyframes itemApp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(1rem);
+  }
+  75% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .header-formenupages {
   position: relative;
 }
@@ -178,8 +208,8 @@ body {
   cursor: pointer;
   max-width: 100%;
   /*animation des cartes */
-  animation: itemAppear 0.6s;
-  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation: itemApp 700ms;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: both;
   transform: scale(0);
 }
