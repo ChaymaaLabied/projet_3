@@ -2,7 +2,7 @@
 @import "animation";
 
 /******** loader********/
-.loader{
+.loader {
 position: fixed;
 height: 100%;
 width: 100%;
@@ -68,6 +68,7 @@ justify-content:center;
 }
 
 /******section1*******/
+
 .introduction {
   padding: 2*$appPadding;
   text-align: center;
@@ -203,11 +204,14 @@ justify-content:center;
   background-color: white;
   border-radius: 1rem;
   position: relative;
-  text-decoration: none;
-  color: inherit;
   display: block;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
   transition: .2s;
+  
+  &_link {
+    text-decoration: none;
+    color: inherit;
+  }
 
   &_img {
     height: 12rem;
@@ -256,6 +260,9 @@ justify-content:center;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    bottom: 1.9rem;
+    right: 2.3rem;
 
   }
 
