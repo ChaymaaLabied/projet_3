@@ -9,7 +9,7 @@
     position: absolute;
     left: 2rem;
     height: 2rem;
-    width:2rem;
+    width: 2rem;
     top: 60%;
     transform: translateY(-50%);
     font-size: 1.2rem;
@@ -30,12 +30,13 @@
   background-color: #f6f6f6;
   z-index: 1;
   position: relative;
-   @media ( min-width:64rem) {
+
+  @media (min-width:64rem) {
     margin-top: -2rem;
     margin-left: 11*$appPadding;
     margin-right: 11*$appPadding;
     padding: 0 9*$appPadding;
-   }
+  }
 
   &_header {
     padding: $appPadding 2*$appPadding 0 $appPadding;
@@ -100,6 +101,11 @@
   overflow: hidden;
   cursor: pointer;
   max-width: 100%;
+  /*animation des cartes */
+  animation: itemAppear .6s;
+  animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
+  animation-fill-mode: both;
+  transform: scale(0);
 
   &_header {
     white-space: nowrap;
@@ -163,6 +169,13 @@
     color: $color-tertiary;
   }
 }
+
+@for $i from 0 to 9 {
+  .delay-#{$i} {
+    animation-delay: #{$i/10}s;
+  }
+}
+
 
 .wrapBtn {
   display: flex;
