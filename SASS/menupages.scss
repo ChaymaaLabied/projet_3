@@ -99,7 +99,7 @@
   border-radius: 0.75rem;
   margin: $appPadding 0;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-  overflow: hidden;
+  overflow: hidden; /* si ça deborde , ça ne sera pas affiché */
   cursor: pointer;
   max-width: 100%;
   /*animation des cartes */
@@ -169,7 +169,11 @@
   &_icon {
     color: $color-tertiary;
   }
+  &:hover &_wrapIcon {
+    transform: rotate(0);
+  }
 }
+
 
 @for $i from 0 to 9 {
   .delay-#{$i} {
