@@ -152,6 +152,9 @@
   &:hover &_confirmation {
     margin-right: -1rem;
   }
+  &:active &_confirmation {
+    margin-right: -1rem;
+  }
 
   &_wrapIcon {
     height: 1.6rem;
