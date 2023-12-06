@@ -380,6 +380,32 @@ body {
   bottom: 1.9rem;
   right: 2.3rem;
 }
+.card_btn--Liked {
+  position: relative;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  /*-webkit-text-fill-color: transparent;*/
+  color: transparent;
+  transition: opacity 500ms ease-in-out;
+  opacity: 0;
+}
+.card_btn--Unliked {
+  position: absolute;
+}
+.card_btn input[type=checkbox] {
+  display: none;
+}
+.card_btn:hover .card_btn--Liked {
+  opacity: 1;
+}
+.card_btn input[type=checkbox]:checked ~ .card_btn--Liked {
+  display: inline-block;
+  opacity: 1;
+}
+.card_btn input[type=checkbox]:checked ~ .card_btn--Unliked {
+  display: none;
+}
 .card_heart {
   font-size: 1.5rem;
 }/*# sourceMappingURL=homepage.css.map */
