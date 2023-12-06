@@ -44,7 +44,7 @@ body {
 }
 .footer_logo {
   color: white;
-  font-family: "Shrikhand", "cursive";
+  font-family: "Shrikhand", sans-serif;
   font-size: 1.2rem;
 }
 @media (min-width: 64rem) {
@@ -127,7 +127,7 @@ body {
   justify-content: center;
 }
 .menu_title {
-  font-family: "Shrikhand", "cursive";
+  font-family: "Shrikhand", sans-serif;
 }
 .menu_btn {
   position: static;

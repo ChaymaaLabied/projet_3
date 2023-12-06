@@ -13,9 +13,11 @@ $appPadding: 1rem;
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+$logoAndRestoName-fontFamily :'Shrikhand', sans-serif;
 
   /********** Mixin ***********/
      /**** bouton violet**/
+
 @mixin button {
   display: flex;
   justify-content: center;
@@ -52,8 +54,7 @@ $color-tertiary: #99E2D0;
 
   &_logo {
     text-align: center;
-    font-family: 'Shrikhand', sans-serif;
-    ;
+    font-family: $logoAndRestoName-fontFamily;
     font-size: 30px;
     font-weight: 400;
     margin: auto;
@@ -81,7 +82,7 @@ $color-tertiary: #99E2D0;
 
   &_logo {
     color: white;
-    font-family: "Shrikhand", "cursive";
+    font-family: $logoAndRestoName-fontFamily;
     font-size: 1.2rem;
 
     @media (min-width:64rem) {
