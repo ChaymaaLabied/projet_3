@@ -53,7 +53,7 @@
   &_btn {
     position: static;
     margin: 16px;
-}
+  }
 
 }
 
@@ -91,16 +91,17 @@
   border-radius: 0.75rem;
   margin: $appPadding 0;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-  overflow: hidden; /* si ça deborde , ça ne sera pas affiché */
+  overflow: hidden;
   cursor: pointer;
   max-width: 100%;
   /*animation des cartes */
   animation: itemApp 700ms;
-  animation-timing-function:ease-in-out;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: both;
   transform: scale(0);
 
   &_header {
+    /* pour l'effet pointillé qu'on réduit la page*/
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -144,6 +145,7 @@
   &:hover &_confirmation {
     margin-right: -1rem;
   }
+
   &:active &_confirmation {
     margin-right: -1rem;
   }
@@ -164,6 +166,7 @@
   &_icon {
     color: $color-tertiary;
   }
+
   &:hover &_wrapIcon {
     transform: rotate(0);
   }

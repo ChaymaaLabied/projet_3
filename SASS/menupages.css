@@ -166,7 +166,7 @@ body {
   border-radius: 0.75rem;
   margin: 1rem 0;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* si ça deborde , ça ne sera pas affiché */
+  overflow: hidden;
   cursor: pointer;
   max-width: 100%;
   /*animation des cartes */
@@ -176,6 +176,7 @@ body {
   transform: scale(0);
 }
 .menuItem_header {
+  /* pour l'effet pointillé qu'on réduit la page*/
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
